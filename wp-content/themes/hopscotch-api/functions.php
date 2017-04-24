@@ -1,5 +1,9 @@
 <?php
-add_action( 'init', 'create_post_types' );
+
+add_filter( 'allowed_http_origin', '__return_true' ); // cors headers
+add_action( 'init', 'create_post_types' ); // custom post types
+
+
 function create_post_types() {
   register_post_type( 'lineup',
     array(
