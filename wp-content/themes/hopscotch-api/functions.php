@@ -13,6 +13,7 @@ add_image_size( '1600', 1600, 1600, false );
 
 
 function create_post_types() {
+
   register_post_type( 'lineup',
     array(
       'labels' => array(
@@ -51,7 +52,9 @@ function create_post_types() {
       'show_in_rest' => true
     )
   );
+
 }
+
 
 function handle_preflight() {
     header("Access-Control-Allow-Origin: " . get_http_origin());
@@ -62,7 +65,5 @@ function handle_preflight() {
         status_header(200);
         exit();
     }
-}
-
 }
 ?>
