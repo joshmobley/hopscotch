@@ -1,14 +1,18 @@
 <?php
 
-add_theme_support( 'post-thumbnails' );
 
 add_action( 'init', 'create_post_types' ); // custom post types
 add_action( 'init', 'handle_preflight' );
+add_action( 'after_setup_theme', 'custom_image_sizes' );
 
-add_image_size( 'small', 400, 400 );
-add_image_size( 'medium', 800, 800 );
-add_image_size( 'large', 1024, 1024 );
-add_image_size( 'xlarge', 1600, 1600 );
+function custom_image_sizes() {
+  add_theme_support( 'post-thumbnails' );
+  add_image_size( '400', 400, 400 );
+  add_image_size( '800', 800, 800 );
+  add_image_size( '1000', 1000, 1000 );
+  add_image_size( '1200', 1200, 1200 );
+  add_image_size( '1600', 1600, 1600 );
+}
 
 
 function create_post_types() {
