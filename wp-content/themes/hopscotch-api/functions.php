@@ -3,16 +3,13 @@
 
 add_action( 'init', 'create_post_types' ); // custom post types
 add_action( 'init', 'handle_preflight' );
-add_action( 'after_setup_theme', 'custom_image_sizes' );
 
-function custom_image_sizes() {
-  add_theme_support( 'post-thumbnails' );
-  add_image_size( '400', 400, 400, false );
-  add_image_size( '800', 800, 800, false );
-  add_image_size( '1000', 1000, 1000, false );
-  add_image_size( '1200', 1200, 1200, false );
-  add_image_size( '1600', 1600, 1600, false );
-}
+add_theme_support( 'post-thumbnails' );
+add_image_size( '400', 400, 400, false );
+add_image_size( '800', 800, 800, false );
+add_image_size( '1000', 1000, 1000, false );
+add_image_size( '1200', 1200, 1200, false );
+add_image_size( '1600', 1600, 1600, false );
 
 
 function create_post_types() {
