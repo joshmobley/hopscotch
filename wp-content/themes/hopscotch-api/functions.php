@@ -19,8 +19,10 @@ function create_post_types() {
         'name' => __( 'Lineup' ),
         'singular_name' => __( 'Speaker' )
       ),
+      'menu_icon' => 'dashicons-megaphone',
       'public' => true,
       'has_archive' => true,
+      'show_in_rest' => true
     )
   );
 
@@ -30,10 +32,26 @@ function create_post_types() {
         'name' => __( 'Schedule' ),
         'singular_name' => __( 'Event' )
       ),
+      'menu_icon' => 'dashicons-calendar-alt',
       'public' => true,
       'has_archive' => true,
+      'show_in_rest' => true
     )
   );
+
+  register_post_type( 'sponsors',
+    array(
+      'labels' => array(
+        'name' => __( 'Sponsors' ),
+        'singular_name' => __( 'Sponsor' )
+      ),
+      'menu_icon' => 'dashicons-money',
+      'public' => true,
+      'has_archive' => true,
+      'show_in_rest' => true
+    )
+  );
+}
 
 function handle_preflight() {
     header("Access-Control-Allow-Origin: " . get_http_origin());
