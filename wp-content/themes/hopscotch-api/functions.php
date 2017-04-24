@@ -7,11 +7,11 @@ add_action( 'after_setup_theme', 'custom_image_sizes' );
 
 function custom_image_sizes() {
   add_theme_support( 'post-thumbnails' );
-  add_image_size( '400', 400, 400 );
-  add_image_size( '800', 800, 800 );
-  add_image_size( '1000', 1000, 1000 );
-  add_image_size( '1200', 1200, 1200 );
-  add_image_size( '1600', 1600, 1600 );
+  add_image_size( '400', 400, 400, false );
+  add_image_size( '800', 800, 800, false );
+  add_image_size( '1000', 1000, 1000, false );
+  add_image_size( '1200', 1200, 1200, false );
+  add_image_size( '1600', 1600, 1600, false );
 }
 
 
