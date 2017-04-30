@@ -57,9 +57,7 @@ function create_post_types() {
 
 
 function handle_preflight() {
-    header("Access-Control-Allow-Origin: http://hopscotch.surge.sh");
-    header("Access-Control-Allow-Origin: http://localhost:4200");
-    header("Access-Control-Allow-Origin: http://hopscotchdesignfest.com");
+    header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
     header("Access-Control-Allow-Credentials: true");
     header("Access-Control-Allow-Headers: Content-Type, x-xsrf-token");
