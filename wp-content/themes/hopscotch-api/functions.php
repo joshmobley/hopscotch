@@ -62,6 +62,7 @@ function handle_preflight() {
     header("Access-Control-Allow-Origin: http://hopscotchdesignfest.com");
     header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
     header("Access-Control-Allow-Credentials: true");
+    header("Access-Control-Allow-Headers: Content-Type, x-xsrf-token");
 
     if ( 'OPTIONS' == $_SERVER['REQUEST_METHOD'] ) {
         status_header(200);
