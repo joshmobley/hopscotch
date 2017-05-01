@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   box-sizing: border-box;
 
+  &--left {
+    justify-content: left;
+    @extend .grid;
+  }
+
   &--simple {
     @extend .grid;
   }

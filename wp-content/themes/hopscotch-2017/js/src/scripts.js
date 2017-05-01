@@ -59,7 +59,7 @@ var forms = function() {
       dataType: "json"
     }).done( function(res) {
       $(form).fadeOut();
-      $('h1').after('<p style="max-width: 600px; margin: 2em; text-align: center;">Thanks! We&rsquo;ll get back to you soon.</p>');
+      $('h1').after('<p style="max-width: 600px; margin: 2em auto; text-align: center;">Thanks! We&rsquo;ll get back to you soon.</p>');
     }).fail( function(err) {
       if( $('.error') ) {
         $('.error').text(err.responseJSON.error);
