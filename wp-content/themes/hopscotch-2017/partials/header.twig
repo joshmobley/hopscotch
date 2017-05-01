@@ -7,7 +7,7 @@
 <body>
 <header>
     <a class="logo" href="{{ site.link }}"><i class="icon h">Hopscotch</i> <strong>Design</strong> Festival</a>
-    <nav class="site-nav" v-bind:class="{ 'is-visible': menuOpen }">
+    <nav class="site-nav">
         <ul>
             <li><a href="{{ site.link }}/experience">Experience</a></li>
             <li><a href="{{ site.link }}/lineup">Lineup</a></li>
@@ -16,7 +16,7 @@
             <li><a href="{{ site.link }}/tickets"><span>Buy Tickets</span></a></li>
         </ul>
     </nav>
-    <span class="nav-toggle" v-bind:class="{ 'is-fixed': menuOpen }">
-      <a href="#site-footer" v-on:click="toggleMenu">Menu</a>
+    <span class="nav-toggle">
+      <a href="#site-footer">Menu</a>
     </span>
 </header>

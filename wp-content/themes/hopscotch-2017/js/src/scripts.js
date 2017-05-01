@@ -2,6 +2,7 @@ $(document).ready( function() {
 
   forms();
   video();
+  menu();
 
 });
 
@@ -93,4 +94,12 @@ var video = function() {
 
   });
 
+}
+
+var menu = function() {
+  $('.nav-toggle a').on('click', function(ev) {
+    ev.preventDefault();
+    $('.site-nav').toggleClass('is-visible');
+    $(this).closest('.nav-toggle').toggleClass('is-fixed');
+  });
 }

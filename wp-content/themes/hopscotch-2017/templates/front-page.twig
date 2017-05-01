@@ -1,6 +1,8 @@
 {% extends 'templates/base.twig' %}
 {% block content %}
 
+    {% set promoCount = 1 %}
+
     {% for block in content_blocks %}
 
         {% if block.acf_fc_layout == 'banner' %}
@@ -22,7 +24,13 @@
 
         {% elseif block.acf_fc_layout == 'promo' %}
 
-        <section class="promo" [class.promo--right]="isEvenCount()">
+          {% if promoCount is even %}
+            {% set class = 'promo--right' %}
+          {% else %}
+            {% set class = 'promo' %}
+          {% endif %}
+
+        <section class="{{ class }}">
           <style>
             #item-{{ loop.index }} {
               background-image: url({{ block.image.sizes.800 }});
@@ -38,6 +46,8 @@
               </div>
             </div>
         </section>
+
+        {% set promoCount = promoCount + 1 %}
 
         {% elseif block.acf_fc_layout == 'headline' %}
 
@@ -65,7 +75,17 @@
 
         {% elseif block.acf_fc_layout == 'sponsors' %}
 
-        Sponsors.
+          <section class="promo--grid">
+            <h2>Sponsors</h2>
+            <div class="grid">
+              {% for item in block.sponsors %}
+              <a href="{{ item.sponsor.link }}" target="_blank" class="grid__item"><img src="{{ TimberImage( item.sponsor.image ) | resize(400) }}" /></a>
+              {% endfor %}
+            </div>
+            <div class="button-container">
+              <a href="{{ site.url }}/contact" class="button">Be a Sponsor</a>
+            </div>
+          </section>
 
         {% endif %}
 

@@ -3,6 +3,8 @@
   position: relative;
   min-height: 400px;
   display: block;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__header {
     margin-bottom: 2em;

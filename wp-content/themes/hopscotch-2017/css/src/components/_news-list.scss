@@ -13,7 +13,7 @@
     }
 
     h3 {
-      font-size: 3.6em;
+      font-size: 2em;
       font-family: "Larsseit-Bold";
       margin: .5em 0;
 
@@ -30,6 +30,8 @@
     .date {
       font-family: "Larsseit-Bold";
       text-transform: uppercase;
+      font-size: .8em;
+      letter-spacing: 1px;
     }
 
     p {
@@ -40,14 +42,36 @@
 
     &--featured {
       margin: 0;
-      padding: 8em;
       background: $gray;
+      padding: 8em 2em;
       @extend .news-list__item;
 
       h3 {
-        font-size: 4.5em;
+        font-size: 2.6em;
       }
     }
+  }
+}
+
+@media screen and (min-width: 800px ){
+  .news-list__item {
+
+    h3 {
+      font-size: 3.6em;
+    }
+
+    .date {
+      font-size: 1em;
+    }
+
+    &--featured {
+      padding: 8em;
+
+      h3 {
+        font-size: 3.6em;
+      }
+    }
+
   }
 }
 

@@ -1,6 +1,8 @@
 .post {
   padding: 4em 2em 0;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__content {
     padding: 2em 0;
@@ -100,7 +102,7 @@
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 
   .post {
     padding: 4em 4em 0;

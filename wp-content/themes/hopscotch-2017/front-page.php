@@ -5,10 +5,6 @@
 
   $context['content_blocks'] = get_field('content');
 
-
-
-
-
   Timber::render('templates/front-page.twig', $context);
 
 ?>

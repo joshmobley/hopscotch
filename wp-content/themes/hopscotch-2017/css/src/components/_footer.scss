@@ -5,7 +5,13 @@ footer {
   padding: 4em 2em 8em;
   position: relative;
 
-  /*.footer-nav {
+  > img {
+    display: block;
+    margin: 1em auto;
+  }
+
+
+  .footer-nav {
     ul {
       margin: 0 0 4em;
 
@@ -14,7 +20,7 @@ footer {
         font-size: 1.2em;
       }
     }
-  }*/
+  }
 
   .icon.h {
     width: 60px;
@@ -34,8 +40,7 @@ footer {
   }
 
   span {
-    top: -.75em;
-    display: inline-block;
+    display: block;
     position: relative;
     margin: 0 1em;
     font-family: "Larsseit-Bold";
@@ -66,11 +71,22 @@ footer {
     }
   }
 }
-/*
+
 @media screen and (min-width: 900px) {
   footer {
     .footer-nav {
       display: none;
     }
+
+    > img {
+      display: inline;
+      margin: 0;
+    }
+
+    span {
+      display: inline-block;
+      top: -.75em;
+      margin: 0 1em;
+    }
   }
-}*/
+}

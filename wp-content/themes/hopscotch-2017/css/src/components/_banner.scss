@@ -1,16 +1,93 @@
 .banner {
-  /* base styles */
+  min-height: calc(100vh - 40px);
+  position: relative;
+
+  .hop-board {
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    height: 100%;
+    width: 20vw;
+    padding: 2em 0;
+    z-index: 2;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  &__image {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: 80% center;
+    z-index: -1;
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 16em;
+    right: 2em;
+    color: $white;
+    text-align: right;
+
+    &::after {
+      content: '';
+      width: 40px;
+      height: 6px;
+      background: $white;
+      display: block;
+      float: right;
+      margin-top: 2em;
+    }
+
+    span {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      + span {
+        margin-top: .5em;
+      }
+    }
+  }
+
+  p {
+    position: absolute;
+    right: 2em;
+    bottom: 6em;
+    color: $white;
+    width: 60%;
+    text-align: right;
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    max-width: 60%;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .banner {
     display: grid;
-    min-height: calc(100vh - 48px);
     grid-template: 1fr repeat(3, 1fr) 1fr / 2em repeat(3, 8vh) 1fr 300px 2em 250px .25fr;
+
+    .hop-board, p, .button-container, h2, h2 span {
+      position: static;
+      width: auto;
+      max-width: none;
+    }
 
     .hop-board {
       grid-column: 3 / span 2;
       grid-row: 1 / span 5;
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
     }
 
     > p {
@@ -26,13 +103,17 @@
     }
 
     h2 {
-      font-family: "Larsseit-Bold";
       grid-column: 2 / span 1;
       grid-row: 2 / span 3;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      text-transform: uppercase;
+      color: $black;
+      text-align: left;
+
+      &::after {
+        content: none;
+      }
 
       span {
         transform: rotate(-90deg);
@@ -90,7 +171,10 @@
       z-index: -1;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 80% center;
+      position: static;
+      width: auto;
+      height: auto;
     }
   }
 }
