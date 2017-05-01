@@ -10,7 +10,7 @@
 
     {% if loop.index == 1 %}
 
-      <div class="news-list__item--featured">
+      <div class="news-list__item--featured" style="background-image: url({{ TimberImage(post.image) }});">
         <h3><a href="{{ site.link }}/news/{{ post.post_name }}">{{ post.title }}</a></h3>
       </div>
 

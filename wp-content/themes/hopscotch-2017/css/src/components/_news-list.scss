@@ -44,6 +44,8 @@
       margin: 0;
       background: $gray;
       padding: 8em 2em;
+      background-size: cover;
+      background-position: center;
       @extend .news-list__item;
 
       h3 {
