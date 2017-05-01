@@ -20,9 +20,14 @@
     color: $white;
   }
 
+  &.large {
+    font-size: 1.2em;
+  }
+
   &--white {
     color: $white;
     border-color: $white;
+    font-size: 1em;
     @extend .button;
 
     &:hover {
