@@ -88,5 +88,8 @@ function randomImage() {
   return 'http://hopdesign.wpengine.com/wp-content/uploads/2017/04/Footer_hero_image_' . $i . '-1000x667.jpg';
 }
 
+function etixLink() {
+  return 'https://www.etix.com/ticket/p/3263928/hopscotch-design-festival-2017--raleigh-hopscotch-design-festival';
+}
 
 ?>
