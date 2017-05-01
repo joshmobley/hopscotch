@@ -6,13 +6,18 @@
   display: inline-block;
   color: $black;
   cursor: pointer;
-  transition: background .5s;
+  transition: all .5s;
   letter-spacing: 2px;
   text-align: center;
 
   &--light {
     color: $white;
     @extend .button;
+  }
+
+  &:hover {
+    background: $hopRed;
+    color: $white;
   }
 
   &--white {
@@ -24,9 +29,5 @@
       background: $white!important;
       color: $black;
     }
-  }
-
-  &:hover {
-    background: $hopRed;
   }
 }
