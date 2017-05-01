@@ -92,4 +92,9 @@ function etixLink() {
   return 'https://www.etix.com/ticket/p/3263928/hopscotch-design-festival-2017--raleigh-hopscotch-design-festival';
 }
 
+function responsiveImage($selector, $image) {
+  return $selector . ' { background-image: url({{ TimberImage(' . $image . ').src("400") }}); }';
+
+}
+
 ?>

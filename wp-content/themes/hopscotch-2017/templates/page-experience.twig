@@ -3,9 +3,21 @@
 
 
   <style>
-    .promo--video {
-      background-image: url( {{ function('wp_get_attachment_image_src', post.image, '1600')[0] }} );
+
+    .promo--video { background-image: url({{ TimberImage(post.image).src('400') }}); }
+    @media screen and (min-width: 400px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src('800') }}); }
     }
+    @media screen and (min-width: 800px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src('1200') }}); }
+    }
+    @media screen and (min-width: 1200px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src('1600') }}); }
+    }
+    @media screen and (min-width: 1600px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src() }}); }
+    }
+
   </style>
 
   <a href="{{ post.src }}" target="_blank" class="promo--video">
@@ -24,8 +36,17 @@
     {% for tile in post.get_field('experience') %}
       {% if tile.image is not empty %}
       #tile-{{ loop.index }} {
-        background-image: url( {{ tile.image.sizes.800 }} );
         background-color: transparent;
+      }
+      #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('400') }}); }
+      @media screen and (min-width: 400px) {
+        #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('800') }}); }
+      }
+      @media screen and (min-width: 800px) {
+        #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('1200') }}); }
+      }
+      @media screen and (min-width: 1200px) {
+        #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('1600') }}); }
       }
       {% endif %}
     {% endfor %}
