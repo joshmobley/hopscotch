@@ -41,6 +41,13 @@
     cursor: pointer;
     @extend .promo--headline;
 
+    &:hover {
+      .icon.play {
+          background-image: url('../../assets/icons/eye.svg');
+          position: relative;
+      }
+    }
+
     .promo__content {
       color: $white;
     }

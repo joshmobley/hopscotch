@@ -22,19 +22,13 @@
 
 
       label {
-        position: absolute;
         color: $black;
-        font-family: "Larsseit-Bold";
-        top: 1.25em;
-        left: .5em;
-        margin-top: 2px;
-        text-transform: uppercase;
-        transition: all .5s;
+        top: 1.5em;
 
-        &.is-outside {
-          top: -1.25em;
+        &.is-active {
+          top: -1.5em;
+
           color: $white;
-          font-size: .8em;
         }
       }
   }
@@ -45,10 +39,8 @@
         border: none;
         padding: calc(1em + 4px) .5em;
         background: $white;
-        font-family: "Larsseit-Bold";
         font-size: 1em;
         vertical-align: bottom;
-        text-transform: uppercase;
         flex: 1;
       }
 
@@ -76,11 +68,14 @@
     }
 
     form {
-
       margin: 0;
       flex-shrink: 1;
       flex-grow: 2;
       max-width: 500px;
+
+      input[type="submit"] {
+        width: 200px;
+      }
     }
 
   }

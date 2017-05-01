@@ -19,6 +19,11 @@
     color: $white;
     border-color: $white;
     @extend .button;
+
+    &:hover {
+      background: $white!important;
+      color: $black;
+    }
   }
 
   &:hover {

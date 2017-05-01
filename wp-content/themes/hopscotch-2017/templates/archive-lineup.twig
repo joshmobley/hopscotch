@@ -1,0 +1,27 @@
+{% extends 'templates/base.twig' %}
+{% block content %}
+
+
+<h1 class="page-title">Lineup</h1>
+
+<section class="promo--grid">
+  <div class="grid">
+
+  {% for post in posts %}
+
+    <a href="{{ site.link }}/lineup/{{ post.post_name }}" class="grid__item">
+        <div class="grid__image-container">
+          <img class="grid__image" src="{{ TimberImage(post.image) | resize(400) }}" />
+          <img class="grid__image--hover" src="{{ TimberImage(post.image_hover) | resize(400) }}" />
+        </div>
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.job_title }} <i class="icon square--small">-</i> {{ post.organization }}</p>
+    </a>
+
+    {% endfor %}
+
+  </div>
+</section>
+
+
+{% endblock %}

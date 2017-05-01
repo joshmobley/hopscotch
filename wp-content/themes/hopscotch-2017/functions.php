@@ -68,4 +68,25 @@ function handle_preflight() {
         exit();
     }
 }
+
+function randomQuote() {
+  $i = rand(0,3);
+
+  $quotes = [
+    'The energy, passion, and enthusiasm that I witnessed, has now been rekindled in me.',
+    'A year’s worth of inspiration in one delicious, social nugget.',
+    'A meeting of creative minds and local professionals changing the meaning of design.',
+    'Hopscotch Design Festival has a gritty, design-focused, innovative edge that other conferences just don’t have.'
+  ];
+
+  return $quotes[$i];
+}
+
+function randomImage() {
+  $i = rand(1, 7);
+
+  return 'http://hopdesign.wpengine.com/wp-content/uploads/2017/04/Footer_hero_image_' . $i . '-1000x667.jpg';
+}
+
+
 ?>

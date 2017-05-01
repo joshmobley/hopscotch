@@ -19,6 +19,11 @@
 
       a {
         color: $hopPurple;
+        transition: color .5s;
+
+        &:hover {
+          color: $hopRed;
+        }
       }
     }
 
@@ -29,7 +34,7 @@
 
     p {
       font-size: 1em;
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
     }
 

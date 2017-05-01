@@ -1,3 +1,8 @@
 <?php
-  echo '<h1>Hopscotch REST API</h1>';
+
+  $context = Timber::get_context();
+  $context['posts'] = Timber::get_posts();
+
+  Timber::render('templates/archive.twig', $context);
+
 ?>

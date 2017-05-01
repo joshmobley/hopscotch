@@ -5,11 +5,11 @@
 
   <style>
     .promo--video {
-      background-image: url( {{ post.image }} );
+      background-image: url( {{ function('wp_get_attachment_image_src', post.image, '1600')[0] }} );
     }
   </style>
 
-  <section class="promo--video">
+  <a href="{{ post.src }}" target="_blank" class="promo--video">
     <div class="promo__content">
       <i href="#" class="icon play large">Play</i>
       <h3>{{ post.label }}</h3>
@@ -19,24 +19,20 @@
         </div>
       </div>
     </div>
-  </section>
+  </a>
 
-
-
-      <style>
-      {% for tile in post.get_field('experience') %}
-        {% if tile.image is not empty %}
-        #tile-{{ loop.index }} {
-          background-image: url( {{ tile.image.sizes.1200 }} );
-          background-color: transparent;
-        }
-        {% endif %}
-
+  <style>
+    {% for tile in post.get_field('experience') %}
+      {% if tile.image is not empty %}
+      #tile-{{ loop.index }} {
+        background-image: url( {{ tile.image.sizes.800 }} );
+        background-color: transparent;
+      }
+      {% endif %}
     {% endfor %}
-      </style>
+  </style>
 
   <section class="tiles">
-
 
     {% for tile in post.get_field('experience') %}
 
@@ -68,14 +64,13 @@
     </div>
     {% endfor %}
 
-
   </section>
 
   <section class="promo--headline">
     <div class="promo__content">
       <h3>More to Come...</h3>
       <div class="button-container">
-        <a routerLink="/news" class="button">In Other News</a>
+        <a href="{{ site.link }}/news" class="button">In Other News</a>
       </div>
     </div>
   </section>

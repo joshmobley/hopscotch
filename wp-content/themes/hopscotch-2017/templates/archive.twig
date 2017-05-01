@@ -1,0 +1,32 @@
+{% extends 'templates/base.twig' %}
+
+{% block content %}
+
+<h1 class="page-title--floating">News</h1>
+
+<section class="news-list">
+
+  {% for post in posts %}
+
+    {% if loop.index == 1 %}
+
+      <div class="news-list__item--featured">
+        <h3><a href="{{ site.link }}/news/{{ post.post_name }}">{{ post.title }}</a></h3>
+      </div>
+
+    {% else %}
+
+      <div class="news-list__item">
+        <p class="date">{{ post.date }}</p>
+        <h3><a href="{{ site.link }}/news/{{ post.post_name }}">{{ post.title }}</a></h3>
+        {{ post.excerpt }}
+        <p>{{ post.get_preview(false,false,'') }}</p>
+      </div>
+
+    {% endif %}
+
+  {% endfor %}
+
+</section>
+
+{% endblock %}

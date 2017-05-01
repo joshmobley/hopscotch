@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
   <title>{% if post.title %} {{ post.title }} | {% endif %}{{ site.name }}</title>
   <link rel="stylesheet" type="text/css" href="{{ theme.link }}/css/dist/global.css" />
 </head>
+<body>
 <header>
     <a class="logo" href="{{ site.link }}"><i class="icon h">Hopscotch</i> <strong>Design</strong> Festival</a>
     <nav class="site-nav" v-bind:class="{ 'is-visible': menuOpen }">

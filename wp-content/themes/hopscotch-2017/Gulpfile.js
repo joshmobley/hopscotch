@@ -14,7 +14,6 @@ var stylelint    = require('gulp-stylelint');
 var eslint       = require('gulp-eslint');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps   = require('gulp-sourcemaps');
-var babel        = require('gulp-babel');
 var plumber      = require('gulp-plumber');
 var notify       = require('gulp-notify');
 
@@ -85,12 +84,6 @@ gulp.task('css',['lint-css'], function() {
 // JAVASCRIPT
 gulp.task("js", function() {
 
-    // configure babel
-    var babelConfig = babel({
-        presets: ['ES2015'],
-        plugins: ['transform-es2015-modules-amd']
-    });
-
     // configure error message via notify
     var errorHandler = notify.onError( function(error) {
         return "JavaScript error: " + error.message;
@@ -99,10 +92,7 @@ gulp.task("js", function() {
     return gulp
         .src( scripts.path + '**/*.js' )        // input files
         .pipe( eslint({
-            fix: true
         }))
-        .pipe( eslint.format() )
-        .pipe( babelConfig )                       // transpile via babel
         .on( 'error', errorHandler )            // report error via notify
         .pipe( plumber() )                      // continue gulp build on error
         .pipe( sourcemaps.init() )              // create sourcemaps
