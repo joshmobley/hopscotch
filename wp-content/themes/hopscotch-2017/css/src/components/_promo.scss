@@ -177,14 +177,14 @@
     background-color: $hopBlue;
     color: $white;
     margin: 0;
-    padding: 4em 2em 400px;
+    padding: 4em 2em 30vw;
     position: relative;
     text-align: center;
     @extend .promo--headline;
 
     &::after {
       content: '';
-      height: 400px;
+      height: 30vw;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -226,7 +226,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 400px;
+      height: 30vw;
       display: block;
       background-position: center;
       background-repeat: no-repeat;
