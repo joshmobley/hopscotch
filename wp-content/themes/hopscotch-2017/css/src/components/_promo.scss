@@ -2,6 +2,8 @@
   margin: 8em 0;
   padding: 0 2em;
   position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
 
   .triplet-image {
     min-height: 100%;
