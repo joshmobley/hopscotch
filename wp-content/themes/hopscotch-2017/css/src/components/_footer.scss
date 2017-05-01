@@ -65,8 +65,14 @@ footer {
         width: 20px;
         height: 20px;
         margin: 0 .25em;
-        background: $hopRed;
         display: inline-block;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &.facebook { background-image: url('../../assets/icons/facebook.svg'); }
+        &.twitter { background-image: url('../../assets/icons/twitter.svg'); }
+        &.instagram { background-image: url('../../assets/icons/instagram.svg'); }
       }
     }
   }

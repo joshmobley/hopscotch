@@ -53,6 +53,11 @@
 }
 
 @media screen and (min-width: 720px) {
+
+  .tiles {
+    margin-bottom: -4em;
+  }
+
   .tile {
     flex-basis: 50%;
     min-height: 45vw;
@@ -62,6 +67,7 @@
 @media screen and (min-width: 1024px) {
   .tiles {
     flex-basis: 33.333%;
+    margin-bottom: -8em;
   }
 
   .tile {
@@ -72,7 +78,7 @@
     }
 
     &--small, &--button {
-      flex-basis: 33%;
+      flex-basis: 33.333%;
     }
 
     &--med {
