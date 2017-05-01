@@ -15,7 +15,11 @@
       </div>
       {{ post.content }}
       <div>
-        <a href="#" class="button" target="_blank">Buy Tickets</a>
+        {% if post.button_label %}
+        <a href="{{ post.button_link }}">{{ post.button_label }}</a>
+        {% else %}
+          <a href="#" class="button" target="_blank">Buy Tickets</a>
+        {% endif %}
         <a href="{{ site.link }}/news" class="button">Back to News</a>
       </div>
     </div>
