@@ -85,6 +85,10 @@
       padding: 0;
     }
 
+    h3 {
+      color: $black;
+    }
+
     h3 a {
       color: $hopPurple;
       transition: color .5s;
@@ -103,7 +107,12 @@
     padding: 6em 2em;
     text-align: center;
     display: block;
+    margin: 0;
     @extend .promo--headline;
+
+    h3 {
+      color: $white;
+    }
 
     &:hover {
       .icon.play {
