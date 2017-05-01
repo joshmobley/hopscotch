@@ -9,6 +9,7 @@ header {
   display: grid;
   align-items: center;
   grid-template: 1fr / 5fr 1fr;
+  position: relative;
 }
 
 .logo {

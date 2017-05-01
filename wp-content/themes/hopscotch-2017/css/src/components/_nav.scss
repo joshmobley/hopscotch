@@ -33,12 +33,13 @@
 }
 
 .nav-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
   text-align: right;
 
   &.is-fixed {
     position: fixed;
-    right: 1em;
-    top: 1em;
     z-index: 9999;
   }
 
