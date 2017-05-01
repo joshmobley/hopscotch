@@ -11,10 +11,8 @@
             <h1 class="hop-board">Hopscotch</h1>
             <h2><span>September 7-8, 2017</span> <span>Raleigh, NC</span></h2>
             <style>
-              .banner__image { background-image: url({{ TimberImage(block.image).src('400') }}); }
-              @media screen and (min-width: 400px) {
-                .banner__image { background-image: url({{ TimberImage(block.image).src('800') }}); }
-              }
+              .banner__image { background-image: url({{ TimberImage(block.image).src('800') }}); }
+
               @media screen and (min-width: 800px) {
                 .banner__image { background-image: url({{ TimberImage(block.image).src('1200') }}); }
               }
