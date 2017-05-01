@@ -1,0 +1,43 @@
+.form-contact {
+  max-width: 500px;
+  margin: 2em auto;
+}
+
+form {
+  input, textarea {
+    padding: calc(1em + 4px) .5em;
+    font-size: 1em;
+    width: 100%;
+    margin: 0 0 1em;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Larsseit";
+  }
+
+  input[type="submit"] {
+    background: none;
+    width: auto;
+    @extend .button;
+  }
+
+  label {
+    font-family: "Larsseit-Bold";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    position: absolute;
+    top: 3em;
+    left: .5em;
+    transition: all .3s;
+
+    &.is-active {
+      top: 0em;
+      left: 0;
+    }
+  }
+
+  .field-group {
+    position: relative;
+    padding-top: 1.5em;
+  }
+}

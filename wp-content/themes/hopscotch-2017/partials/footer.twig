@@ -1,0 +1,48 @@
+ <section class="mailing-list">
+    <p>
+        <strong>Don't miss the adventure.</strong>
+        Subscribe to our mailing list.
+    </p>
+    <form>
+        <label for="email">Email</label>
+        <input type="email" name="email" [(ngModel)]="email" />
+        <input type="submit" (click)="mailchimpSignup()" value="Subscribe" />
+    </form>
+</section>
+
+<section class="promo--photo">
+  <div class="promo__content">
+    <blockquote>
+        <div class="quote">{{ quotes[randomInt] }}</div> <span>- 2016 Hopscotcher</span>
+    </blockquote>
+    <p>Sept 7-8, 2017 <i class="icon line">|</i> Raleigh, NC</p>
+    <div class="button-container">
+      <a href="#" class="button--light">Buy Tickets</a>
+    </div>
+  </div>
+  <div class="promo__image" [ngStyle]="image"></div>
+</section>
+
+<footer id="site-footer">
+  <i class="icon h">Hopscotch</i>
+    <!--<nav class="footer-nav">
+      <ul>
+          <li><a href="{{ path }}/experience">Experience</a></li>
+          <li><a href="{{ path }}/lineup">Lineup</a></li>
+          <li><a href="{{ path }}/news">News</a></li>
+          <li><a href="{{ path }}/travel">Travel</a></li>
+          <li><a href="{{ path }}/contact">Contact</a></li>
+          <li><a href="{{ path }}/tickets">Buy Tickets</a></li>
+      </ul>
+    </nav>-->
+    <p>Produced by New Kind and Hopscotch Music Festival</p>
+    <img src="{{ theme.link }}/assets/icons/NewKind_footer_logo.svg" />
+    <span>+</span>
+    <img src="{{ theme.link }}/assets/icons/Hopscotch_footer_logo.svg" />
+    <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+    </ul>
+    <p class="copyright">&copy; 2017. Site design by <a href="http://newkind.com" target="_blank">New Kind</a>.</p>
+</footer>

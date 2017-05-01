@@ -1,0 +1,12 @@
+.content-placeholder {
+  background: #e3e3e3!important;
+  width: 100%;
+  display: block;
+  min-height: 1em;
+
+  &.grid__image {
+    padding-top: 100%;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+  }
+}
