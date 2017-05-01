@@ -16,6 +16,10 @@
 
   &__content {
     padding-left: 20vw;
+
+    > p {
+      font-size: 1.6em;
+    }
   }
 
   h2 {
@@ -46,7 +50,7 @@
   }
 
   dl {
-    font-size: 1.2em;
+    font-size: 1.6em;
 
     dt {
       font-family: "Larsseit-Bold";
@@ -243,6 +247,7 @@
     margin-top: 8em;
 
     &__content {
+      position: relative;
       padding-left: 0;
     }
 
@@ -262,6 +267,22 @@
       font-size: 2.8em;
       font-family: "Larsseit-Bold";
       margin-bottom: 1em;
+    }
+
+    dl {
+      padding-left: 55%;
+    }
+
+    dt {
+
+      float: left;
+      clear: left;
+
+    }
+
+    dd {
+      margin-top: 1em;
+      padding-bottom: .5em;
     }
 
     .triplet-image-container, .triplet-image {
