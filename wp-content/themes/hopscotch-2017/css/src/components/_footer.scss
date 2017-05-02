@@ -83,6 +83,13 @@ footer {
     display: none;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .alert-message {
+    display: none;
+  }
+}
+
 .alert-message {
     position: fixed;
     top: 0;
