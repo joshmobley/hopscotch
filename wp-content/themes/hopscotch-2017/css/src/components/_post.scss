@@ -116,6 +116,10 @@
   .post {
     padding: 4em 4em 0;
 
+    > img {
+      width: 100%;
+    }
+
     &__content {
       padding: 4em 4em 4em 2em;
       max-width: 800px;
