@@ -3,6 +3,7 @@ $(document).ready( function() {
   forms();
   video();
   menu();
+  overlay();
 
 });
 
@@ -101,5 +102,16 @@ var menu = function() {
     ev.preventDefault();
     $('.site-nav').toggleClass('is-visible');
     $(this).closest('.nav-toggle').toggleClass('is-fixed');
+  });
+}
+
+var overlay = function() {
+  if( localStorage.getItem('hopscotch-closed-alert') ) {
+    $('.alert-message').remove();
+  }
+  $('.alert-message a').on('click', function(ev) {
+    ev.preventDefault();
+    $('.alert-message').remove();
+    localStorage.setItem('hopscotch-closed-alert', 'true');
   });
 }

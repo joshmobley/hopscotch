@@ -235,7 +235,7 @@
         display: block;
         font-size: .6em;
         text-align: right;
-        margin-right: 2em;
+        margin-right: 4em;
         line-height: 1.2em;
       }
     }
@@ -255,7 +255,10 @@
 }
 
 @media screen and (min-width: 800px) {
-  .promo {
+
+  @supports (grid-template: 1fr / 1fr) {
+
+    .promo {
     padding: 0;
     display: grid;
     grid-template: 2em 1fr 2em / 2em 60px 8fr 2fr 8fr 60px 2em;
@@ -390,4 +393,7 @@
       }
     }
   }
+
+  }
+
 }

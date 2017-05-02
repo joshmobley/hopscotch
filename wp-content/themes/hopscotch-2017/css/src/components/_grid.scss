@@ -10,6 +10,8 @@
   }
 
   &--simple {
+    align-items: center;
+    justify-content: left;
     @extend .grid;
   }
 

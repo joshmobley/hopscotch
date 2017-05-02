@@ -72,6 +72,7 @@
 }
 
 @media screen and (min-width: 900px) {
+
   .banner {
     display: grid;
     grid-template: 1fr repeat(3, 1fr) 1fr / 2em repeat(3, 8vh) 1fr 300px 2em 250px .25fr;
