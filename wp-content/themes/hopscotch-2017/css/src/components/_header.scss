@@ -9,7 +9,12 @@ header {
   display: grid;
   align-items: center;
   grid-template: 1fr / 5fr 1fr;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
 }
 
 .logo {
@@ -36,6 +41,7 @@ header {
 @media screen and (min-width: 900px) {
   header {
     padding: 0 0 0 2em;
+    position: relative;
     grid-template: 1fr / 1fr 3fr;
   }
 }

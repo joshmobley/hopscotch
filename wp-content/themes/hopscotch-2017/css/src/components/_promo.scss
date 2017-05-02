@@ -138,7 +138,6 @@
     &:hover {
       .icon.play {
           background-image: url('../../assets/icons/eye.svg');
-          position: relative;
       }
     }
 
@@ -163,9 +162,10 @@
 
       .promo__player-container {
         position: absolute;
-        width: 80%;
+        width: 70%;
         height: 80%;
-        left: 10%;
+        box-sizing: border-box;
+        left: 15%;
         top: 10%;
       }
 
