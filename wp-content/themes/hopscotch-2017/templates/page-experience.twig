@@ -81,7 +81,7 @@
           {% else %}
             {% set buttonClass = 'button' %}
           {% endif %}
-          <a href="#" class="{{ buttonClass }}">{{ tile.button_label }}</a>
+          <a href="{{ tile.button_url }}" class="{{ buttonClass }}">{{ tile.button_label }}</a>
         {% endif %}
       </div>
     </div>
