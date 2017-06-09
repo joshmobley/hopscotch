@@ -1,0 +1,60 @@
+.icon {
+  display: inline-block;
+  text-indent: -9999em;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.h {
+    background-image: url('../../assets/icons/h.svg');
+  }
+
+  &.play {
+    background-image: url('../../assets/icons/play.svg');
+  }
+
+  &.large {
+    height: 40px;
+    width: 80px;
+  }
+
+  &.square {
+    background: $hopBlue;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: .25em;
+    margin: 0 .5em;
+
+    &--small {
+      height: 6px;
+      width: 6px;
+      top: .35em;
+      margin: 0 .25em;
+      background: $black;
+      @extend .square;
+    }
+  }
+
+  &.line {
+    border-left: 1px solid $white;
+    width: 1px;
+    margin: 0 1em;
+    height: 2em;
+    position: relative;
+    top: -.5em;
+  }
+}
+
+@media screen and( min-width: 800px ) {
+  .icon {
+
+    &.large {
+      width: 140px;
+      height: 80px;
+    }
+
+  }
+}

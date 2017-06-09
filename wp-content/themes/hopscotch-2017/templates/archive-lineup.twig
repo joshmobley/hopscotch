@@ -1,0 +1,373 @@
+{% extends 'templates/base.twig' %}
+{% block content %}
+
+<div class="wrapper--large">
+
+<h1 class="page-title">Lineup</h1>
+
+<section class="promo--grid">
+  <div class="grid--left">
+
+  {% for post in posts %}
+
+    <a href="{{ site.link }}/lineup/{{ post.post_name }}" class="grid__item">
+        <div class="grid__image-container">
+          <img class="grid__image" src="{{ TimberImage(post.image).src('400') }}" />
+          <img class="grid__image--hover" src="{{ TimberImage(post.image_hover).src('400') }}" />
+        </div>
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.job_title }} <i class="icon square--small">-</i> {{ post.organization }}</p>
+    </a>
+
+    {% endfor %}
+
+  </div>
+</section>
+
+<h2 class="page-title">Past Speakers</h2>
+
+<section class="promo--grid">
+  <div class="grid--simple">
+    <div class="grid__item">
+        <h5>Adam Cutler</h5>
+    </div>
+
+<div class="grid__item">
+  <h5>Adrienne Brown</h5>
+</div>
+<div class="grid__item">
+  <h5>Alexa Clay</h5>
+</div>
+<div class="grid__item">
+  <h5>Alexander Isley</h5>
+</div>
+<div class="grid__item">
+  <h5>Amanda Matson</h5>
+</div>
+<div class="grid__item">
+  <h5>Ana Maria Muñoz</h5>
+</div>
+<div class="grid__item">
+  <h5>Annie Atkins</h5>
+</div>
+<div class="grid__item">
+  <h5>Antoinette Carroll</h5>
+</div>
+<div class="grid__item">
+  <h5>Apple Juice Kid + Pierce Freelon</h5>
+</div>
+<div class="grid__item">
+  <h5>Arthur Earnest</h5>
+</div>
+<div class="grid__item">
+  <h5>Ashleigh Axios</h5>
+</div>
+<div class="grid__item">
+  <h5>Austin Kleon</h5>
+</div>
+<div class="grid__item">
+  <h5>Brad Baer</h5>
+</div>
+<div class="grid__item">
+  <h5>Brian Fitzpatrick</h5>
+</div>
+<div class="grid__item">
+  <h5>Brian Singer</h5>
+</div>
+<div class="grid__item">
+  <h5>Brooke Belk</h5>
+</div>
+<div class="grid__item">
+  <h5>Bruce Willen</h5>
+</div>
+<div class="grid__item">
+  <h5>Casey Caplowe</h5>
+</div>
+<div class="grid__item">
+  <h5>Celia Hodent</h5>
+</div>
+<div class="grid__item">
+  <h5>Cheetie Kumar</h5>
+</div>
+<div class="grid__item">
+  <h5>Chris Alexander</h5>
+</div>
+<div class="grid__item">
+  <h5>Christopher Gergen</h5>
+</div>
+<div class="grid__item">
+  <h5>Christopher Simmons</h5>
+</div>
+<div class="grid__item">
+  <h5>Cliff Bleszinski</h5>
+</div>
+<div class="grid__item">
+  <h5>Creighton Blackwell</h5>
+</div>
+<div class="grid__item">
+  <h5>Dan Douglas</h5>
+</div>
+<div class="grid__item">
+  <h5>Dan Gottlieb</h5>
+</div>
+<div class="grid__item">
+  <h5>Dan Heath</h5>
+</div>
+<div class="grid__item">
+  <h5>Daniel Horowitz</h5>
+</div>
+<div class="grid__item">
+  <h5>Daniel Lupton</h5>
+</div>
+<div class="grid__item">
+  <h5>David and Mary Sherwin</h5>
+</div>
+<div class="grid__item">
+  <h5>David Baldwin</h5>
+</div>
+<div class="grid__item">
+  <h5>David Burris</h5>
+</div>
+<div class="grid__item">
+  <h5>David Conover</h5>
+</div>
+<div class="grid__item">
+  <h5>David Gallo</h5>
+</div>
+<div class="grid__item">
+  <h5>Debbie Millman</h5>
+</div>
+<div class="grid__item">
+  <h5>Derek Keller</h5>
+</div>
+<div class="grid__item">
+  <h5>Dori Tunstall</h5>
+</div>
+<div class="grid__item">
+  <h5>Doug Powell</h5>
+</div>
+<div class="grid__item">
+  <h5>Dr. Tashni-Ann Dubroy</h5>
+</div>
+<div class="grid__item">
+  <h5>Ekene Ijeoma</h5>
+</div>
+<div class="grid__item">
+  <h5>Elizabeth Alley</h5>
+</div>
+<div class="grid__item">
+  <h5>Elizabeth Weichel</h5>
+</div>
+<div class="grid__item">
+  <h5>Elle Luna</h5>
+</div>
+<div class="grid__item">
+  <h5>Elliott Montgomery + The Extrapolation Factory</h5>
+</div>
+<div class="grid__item">
+  <h5>Erin White</h5>
+</div>
+<div class="grid__item">
+  <h5>Gabriel Deloach</h5>
+</div>
+<div class="grid__item">
+  <h5>Garrett Grohman</h5>
+</div>
+<div class="grid__item">
+  <h5>Graham Roberts</h5>
+</div>
+<div class="grid__item">
+  <h5>Harper Reed</h5>
+</div>
+<div class="grid__item">
+  <h5>Heather Cook</h5>
+</div>
+<div class="grid__item">
+  <h5>Helena Price</h5>
+</div>
+<div class="grid__item">
+  <h5>Ilias Papageorgiou</h5>
+</div>
+<div class="grid__item">
+  <h5>Jake Levitas</h5>
+</div>
+<div class="grid__item">
+  <h5>Jarin Tabata</h5>
+</div>
+<div class="grid__item">
+  <h5>Jason Queen</h5>
+</div>
+<div class="grid__item">
+  <h5>Jedidiah Gant</h5>
+</div>
+<div class="grid__item">
+  <h5>Joe Schmidt</h5>
+</div>
+<div class="grid__item">
+  <h5>Joe Schram</h5>
+</div>
+<div class="grid__item">
+  <h5>John Holmes + Scott Crawford</h5>
+</div>
+<div class="grid__item">
+  <h5>Joseph Weissgold</h5>
+</div>
+<div class="grid__item">
+  <h5>Josh Goldblum</h5>
+</div>
+<div class="grid__item">
+  <h5>Joshua Gajownik</h5>
+</div>
+<div class="grid__item">
+  <h5>Julie Anixter</h5>
+</div>
+<div class="grid__item">
+  <h5>Justin Johnson + Matthew Cronheim</h5>
+</div>
+<div class="grid__item">
+  <h5>Justin LeBlanc</h5>
+</div>
+<div class="grid__item">
+  <h5>Justin Miller</h5>
+</div>
+<div class="grid__item">
+  <h5>Kai-Uwe Bergmann</h5>
+</div>
+<div class="grid__item">
+  <h5>Kaitlyn Goalen</h5>
+</div>
+<div class="grid__item">
+  <h5>Katie Potochney</h5>
+</div>
+<div class="grid__item">
+  <h5>Lawrence Azzerad</h5>
+</div>
+<div class="grid__item">
+  <h5>Lawrence Scarpa</h5>
+</div>
+<div class="grid__item">
+  <h5>Lee Noble</h5>
+</div>
+<div class="grid__item">
+  <h5>Lilyn Hester</h5>
+</div>
+<div class="grid__item">
+  <h5>Lulu Miller</h5>
+</div>
+<div class="grid__item">
+  <h5>Maria Fabrizio</h5>
+</div>
+<div class="grid__item">
+  <h5>Matt Curtis</h5>
+</div>
+<div class="grid__item">
+  <h5>Matt Morasky</h5>
+</div>
+<div class="grid__item">
+  <h5>Matt Rollins</h5>
+</div>
+<div class="grid__item">
+  <h5>Matt Tomasulo</h5>
+</div>
+<div class="grid__item">
+  <h5>Maurice Cherry</h5>
+</div>
+<div class="grid__item">
+  <h5>Maurice Woods</h5>
+</div>
+<div class="grid__item">
+  <h5>Meredith Pittman</h5>
+</div>
+<div class="grid__item">
+  <h5>Merrette Moore</h5>
+</div>
+<div class="grid__item">
+  <h5>Micah Stanovsky</h5>
+</div>
+<div class="grid__item">
+  <h5>Michael Hoy</h5>
+</div>
+<div class="grid__item">
+  <h5>Michelle Higa Fox</h5>
+</div>
+<div class="grid__item">
+  <h5>Mig Reyes</h5>
+</div>
+<div class="grid__item">
+  <h5>Mike Cuales</h5>
+</div>
+<div class="grid__item">
+  <h5>Mitchell Joachim</h5>
+</div>
+<div class="grid__item">
+  <h5>Mitchell Silver</h5>
+</div>
+<div class="grid__item">
+  <h5>Napoleon Wright</h5>
+</div>
+<div class="grid__item">
+  <h5>Nikelle Orellana-Reyes</h5>
+</div>
+<div class="grid__item">
+  <h5>Pamela Abalu</h5>
+</div>
+<div class="grid__item">
+  <h5>Patrick Hobgood</h5>
+</div>
+<div class="grid__item">
+  <h5>Paul Jones</h5>
+</div>
+<div class="grid__item">
+  <h5>Rebecca Horton</h5>
+</div>
+<div class="grid__item">
+  <h5>Rob Cotter</h5>
+</div>
+<div class="grid__item">
+  <h5>Rochelle Johnson & Nick Hawthorne-Johnson</h5>
+</div>
+<div class="grid__item">
+  <h5>Rusty Smith</h5>
+</div>
+<div class="grid__item">
+  <h5>Sarah Miller Caldicott</h5>
+</div>
+<div class="grid__item">
+  <h5>Sha Hwang</h5>
+</div>
+<div class="grid__item">
+  <h5>Shana Overdorf</h5>
+</div>
+<div class="grid__item">
+  <h5>Shohei Shigematsu</h5>
+</div>
+<div class="grid__item">
+  <h5>Silas Munro</h5>
+</div>
+<div class="grid__item">
+  <h5>Steve Frykholm</h5>
+</div>
+<div class="grid__item">
+  <h5>Steven Schuster</h5>
+</div>
+<div class="grid__item">
+  <h5>Terry Irwin</h5>
+</div>
+<div class="grid__item">
+  <h5>Timothy Myers</h5>
+</div>
+<div class="grid__item">
+  <h5>Tina Roth Eisenberg</h5>
+</div>
+<div class="grid__item">
+  <h5>Tom Milavec</h5>
+</div>
+<div class="grid__item">
+  <h5>Tristan Shone</h5>
+</div>
+  </div>
+</section>
+</div>
+
+
+{% endblock %}

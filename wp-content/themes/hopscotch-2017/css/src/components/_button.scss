@@ -1,0 +1,38 @@
+.button {
+  font-family: "Larsseit-Bold";
+  border: 6px solid $hopRed;
+  padding: 1em 2em .8em;
+  text-transform: uppercase;
+  display: inline-block;
+  color: $black;
+  cursor: pointer;
+  transition: all .5s;
+  letter-spacing: 2px;
+  text-align: center;
+
+  &--light {
+    color: $white;
+    @extend .button;
+  }
+
+  &:hover {
+    background: $hopRed;
+    color: $white;
+  }
+
+  &.large {
+    font-size: 1.2em;
+  }
+
+  &--white {
+    color: $white;
+    border-color: $white;
+    font-size: 1em;
+    @extend .button;
+
+    &:hover {
+      background: $white!important;
+      color: $black;
+    }
+  }
+}

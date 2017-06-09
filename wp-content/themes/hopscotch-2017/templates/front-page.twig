@@ -1,0 +1,106 @@
+{% extends 'templates/base.twig' %}
+{% block content %}
+
+    {% set promoCount = 1 %}
+
+    {% for block in content_blocks %}
+
+        {% if block.acf_fc_layout == 'banner' %}
+
+        <section class="banner">
+            <h1 class="hop-board">Hopscotch</h1>
+            <h2><span>September 7-8, 2017</span> <span>Raleigh, NC</span></h2>
+            <style>
+              .banner__image { background-image: url({{ TimberImage(block.image).src('800') }}); }
+
+              @media screen and (min-width: 800px) {
+                .banner__image { background-image: url({{ TimberImage(block.image).src('1200') }}); }
+              }
+              @media screen and (min-width: 1200px) {
+                .banner__image { background-image: url({{ TimberImage(block.image).src('1600') }}); }
+              }
+              @media screen and (min-width: 1600px) {
+                .banner__image { background-image: url({{ TimberImage(block.image).src() }}); }
+              }
+            </style>
+            <div class="banner__image"></div>
+            <p>{{ block.text }}</p>
+            <div class="button-container">
+              <a href="{{ block.button_link }}" class="button--light">{{ block.button_label }}</a>
+            </div>
+        </section>
+
+        {% elseif block.acf_fc_layout == 'promo' %}
+
+          {% if promoCount is even %}
+            {% set class = 'promo--right' %}
+          {% else %}
+            {% set class = 'promo' %}
+          {% endif %}
+
+        <section class="{{ class }}">
+          <style>
+              #item-{{ loop.index }}{ background-image: url({{ TimberImage(block.image).src('400') }}); }
+              @media screen and (min-width: 400px) {
+                 #item-{{ loop.index }} { background-image: url({{ TimberImage(block.image).src('800') }}); }
+              }
+              @media screen and (min-width: 800px) {
+                 #item-{{ loop.index }} { background-image: url({{ TimberImage(block.image).src('1200') }}); }
+              }
+          </style>
+          <h2>{{ block.header }}</h2>
+            <div class="triplet-image" id="item-{{ loop.index }}"></div>
+            <div class="promo__content">
+              <h3>{{ block.title }}</h3>
+              {{ block.text }}
+              <div class="button-container">
+                <a href="{{ block.button_link }}" class="button">{{ block.button_label }}</a>
+              </div>
+            </div>
+        </section>
+
+        {% set promoCount = promoCount + 1 %}
+
+        {% elseif block.acf_fc_layout == 'headline' %}
+
+        <section class="promo--headline">
+            <h2>{{ block.header }}</h2>
+            <div class="promo__content">
+              <h3><a href="{{ block.title_link }}">{{ block.title }}</a></h3>
+              <div class="button-container">
+                <a href="{{ block.button_link }}" class="button">{{ block.button_label }}</a>
+              </div>
+            </div>
+        </section>
+
+        {% elseif block.acf_fc_layout == 'lineup' %}
+
+        <section class="promo--grid">
+          <h2>{{ block.header }}</h2>
+          <div class="grid--between">
+            {% include 'partials/tile.twig' with block %}
+          </div>
+          <div class="button-container">
+            <a href="{{ block.button_link }}" class="button">{{ block.button_label }}</a>
+          </div>
+          </section>
+
+        {% elseif block.acf_fc_layout == 'sponsors' %}
+
+          <section class="promo--grid">
+            <h2>Sponsors</h2>
+            <div class="grid">
+              {% for item in block.sponsors %}
+              <a href="{{ item.sponsor.link }}" target="_blank" class="grid__item"><img src="{{ TimberImage( item.sponsor.image ).src('400') }}" /></a>
+              {% endfor %}
+            </div>
+            <div class="button-container">
+              <a href="{{ site.url }}/contact" class="button">Be a Sponsor</a>
+            </div>
+          </section>
+
+        {% endif %}
+
+    {% endfor %}
+
+ {% endblock %}

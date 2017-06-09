@@ -1,0 +1,17 @@
+{% extends 'templates/base.twig' %}
+{% block content %}
+  <div class="profile">
+    <a href="{{ site.link }}/lineup" class="back-link">&larr; back to lineup</a>
+    <div class="profile__content">
+      <div class="profile__header">
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.job_title }} <i class="icon square">-</i> {{ post.organization }}</h2>
+      </div>
+      <img src="{{ TimberImage(post.image) | resize(500) }}" class="profile__image" />
+      <p>{{ post.bio }}</p>
+      {% if post.website is not empty %}
+        <a href="{{ post.website }}" class="button" target="_blank">Website</a>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'templates/base.twig' %}
+
+{% block content %}
+
+  <div class="post">
+
+    {% for post in posts %}
+    <a href="{{ site.link }}/news" class="back-link">&larr; back to news</a>
+      <img src="{{ TimberImage(post.image) }}" class="post__image" />
+
+    <div class="post__content">
+      <div class="post__header">
+        <h1>{{ post.title }}</h1>
+        <p class="post__meta">{{ post.author }} // {{ post.date }}</p>
+      </div>
+      {{ post.content }}
+      <div>
+        {% if post.button_label %}
+        <a href="{{ post.button_link }}" class="button">{{ post.button_label }}</a>
+        {% else %}
+          <a href="{{ function('etixLink') }}" class="button" target="_blank">Buy Tickets</a>
+        {% endif %}
+        <a href="{{ site.link }}/news" class="button">Back to News</a>
+      </div>
+    </div>
+
+    <div class="post__sidebar">
+      <h2>In Other News</h2>
+      {% for item in more_posts %}
+      {% if item.link == post.link %}
+        {% set active = 'is-active' %}
+      {% else %}
+        {% set active = '' %}
+      {% endif %}
+      <div class="post__sidebar-item">
+        <h3><a href="{{ item.link }}" class="{{ active }}">{{ item.title }}</a></h3>
+        <p>{{ item.date }}</p>
+      </div><!--__sidebar-item-->
+      {% endfor %}
+    </div><!--__sidebar-->
+  </div><!--.post-->
+  {% endfor %}
+
+
+{% endblock %}

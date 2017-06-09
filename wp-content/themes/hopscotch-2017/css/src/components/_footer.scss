@@ -1,0 +1,141 @@
+footer {
+  background: $black;
+  color: $white;
+  text-align: center;
+  padding: 4em 2em 8em;
+  position: relative;
+
+  > img {
+    display: block;
+    margin: 1em auto;
+  }
+
+
+  .footer-nav {
+    ul {
+      margin: 0 0 4em;
+
+      li {
+        margin-bottom: 1em;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .icon.h {
+    width: 60px;
+    height: 60px;
+    filter: grayscale(100%);
+    opacity: .25;
+    margin-bottom: 4em;
+  }
+
+  p {
+    font-size: .8em;
+    margin-bottom: 2em;
+  }
+
+  a {
+    color: $white;
+  }
+
+  span {
+    display: block;
+    position: relative;
+    margin: 0 1em;
+    font-family: "Larsseit-Bold";
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .social-links {
+    margin-top: 2em;
+
+    li {
+      display: inline;
+
+      a {
+        text-indent: -9999em;
+        width: 20px;
+        height: 20px;
+        margin: 0 .25em;
+        display: inline-block;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &.facebook { background-image: url('../../assets/icons/facebook.svg'); }
+        &.twitter { background-image: url('../../assets/icons/twitter.svg'); }
+        &.instagram { background-image: url('../../assets/icons/instagram.svg'); }
+      }
+    }
+  }
+}
+
+@supports ( grid-template: 1fr / 1fr ) {
+  .alert-message {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .alert-message {
+    display: none;
+  }
+}
+
+.alert-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4em;
+    box-sizing: border-box;
+    background: $black;
+    background: rgba(0,0,0,.5);
+    z-index: 9999;
+    color: $white;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      max-width: 800px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin-bottom: 2em;
+    }
+  }
+
+@media screen and (min-width: 900px) {
+  footer {
+    .footer-nav {
+      display: none;
+    }
+
+    > img {
+      display: inline;
+      margin: 0;
+    }
+
+    span {
+      display: inline-block;
+      top: -.75em;
+      margin: 0 1em;
+    }
+  }
+}

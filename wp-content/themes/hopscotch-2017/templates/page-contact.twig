@@ -1,0 +1,40 @@
+{% extends 'templates/base.twig' %}
+
+{% block content %}
+
+<h1 class="page-title">Contact</h1>
+
+  <form action="https://formspree.io/marie@newkind.com"
+      method="POST" class="form-contact">
+
+    <div class="field-group">
+      <label for="name">Name</label>
+      <input type="text" name="name">
+    </div>
+
+    <input type="hidden" name="_subject" value="Hopscotch Contact Form Submission" />
+
+    <div class="field-group">
+      <label for="_replyto">Email</label>
+      <input type="email" name="_replyto">
+    </div>
+
+    <div class="field-group">
+      <label for="organization">Organization</label>
+      <input type="text" name="organization">
+    </div>
+
+    <div class="field-group" style="display:none;">
+      <label for="country">Country</label>
+      <input type="text" name="_gotcha" />
+    </div>
+
+    <div class="field-group">
+      <label for="message">Message</label>
+      <textarea name="message"></textarea>
+    </div>
+
+    <input type="submit" value="Send" />
+  </form>
+
+{% endblock %}

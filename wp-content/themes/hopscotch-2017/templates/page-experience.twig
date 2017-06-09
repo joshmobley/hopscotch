@@ -1,0 +1,103 @@
+{% extends 'templates/base.twig' %}
+{% block content %}
+
+
+  <style>
+
+    .promo--video { background-image: url({{ TimberImage(post.image).src('400') }}); }
+    @media screen and (min-width: 400px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src('800') }}); }
+    }
+    @media screen and (min-width: 800px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src('1200') }}); }
+    }
+    @media screen and (min-width: 1200px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src('1600') }}); }
+    }
+    @media screen and (min-width: 1600px) {
+      .promo--video { background-image: url({{ TimberImage(post.image).src() }}); }
+    }
+
+  </style>
+
+  <a href="{{ post.src }}" target="_blank" class="promo--video">
+    <div class="promo__content">
+      <i href="#" class="icon play large">Play</i>
+      <h3>{{ post.label }}</h3>
+      <div class="promo__player">
+        <div class="promo__player-container">
+          <div class="promo__player-wrapper"><iframe src="{{ post.src }}"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <style>
+    {% for tile in post.get_field('experience') %}
+      {% if tile.image is not empty %}
+      #tile-{{ loop.index }} {
+        background-color: transparent;
+      }
+      #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('400') }}); }
+      @media screen and (min-width: 400px) {
+        #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('800') }}); }
+      }
+      @media screen and (min-width: 800px) {
+        #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('1200') }}); }
+      }
+      @media screen and (min-width: 1200px) {
+        #tile-{{ loop.index }} { background-image: url({{ TimberImage(tile.image).src('1600') }}); }
+      }
+      {% endif %}
+    {% endfor %}
+  </style>
+
+
+<div class="wrapper--large">
+
+  <section class="tiles">
+
+    {% for tile in post.get_field('experience') %}
+
+      {% if tile.button_label is defined and tile.title is empty %}
+        {% set class = 'tile--button' %}
+      {% elseif tile.width == 'two' %}
+        {% set class = 'tile--med' %}
+      {% else %}
+        {% set class = 'tile--small' %}
+      {% endif %}
+
+    <div class="{{ class }}" id="tile-{{ loop.index }}">
+      <div class="tile__content">
+        {% if tile.title is defined and tile.image is empty %}
+          <h3>{{ tile.title }}</h3>
+        {% endif %}
+        {% if tile.text is defined and  tile.image is empty %}
+          {{ tile.text }}
+        {% endif %}
+        {% if tile.button_label %}
+          {% if class == 'tile--med' %}
+            {% set buttonClass = 'button--white' %}
+          {% else %}
+            {% set buttonClass = 'button' %}
+          {% endif %}
+          <a href="{{ tile.button_url }}" class="{{ buttonClass }}">{{ tile.button_label }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+  </section>
+
+  <!--<section class="promo--headline">
+    <div class="promo__content">
+      <h3>More to Come...</h3>
+      <div class="button-container">
+        <a href="{{ site.link }}/news" class="button">In Other News</a>
+      </div>
+    </div>
+  </section>-->
+
+</div>
+
+{% endblock %}

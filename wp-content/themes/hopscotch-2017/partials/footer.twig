@@ -1,0 +1,80 @@
+ <section class="mailing-list">
+
+    <p>
+        <strong>Don't miss the adventure.</strong>
+        Subscribe to our mailing list.
+    </p>
+
+<form action="//hopscotchdesignfest.us13.list-manage.com/subscribe/post?u=9d42a95dc9a45819f6d5209a6&amp;id=a993e5975f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+
+  	<label for="mce-EMAIL">Email</label>
+  	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    <input type="text" name="b_9d42a95dc9a45819f6d5209a6_a993e5975f" tabindex="-1" value="" style="position: absolute; left: -9999em;">
+
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+
+</form>
+
+<!--End mc_embed_signup-->
+    <!--<form>
+        <label for="email">Email</label>
+        <input type="email" name="email" />
+        <input type="submit" value="Subscribe" />
+    </form>-->
+</section>
+
+<section class="promo--photo">
+  <div class="promo__content">
+    <blockquote>
+      {% if post.footer_quote is not empty %}
+        <div class="quote">The energy, passion, and enthusiasm that I witnessed, has now been rekindled in me.</div> <span>- 2016 Hopscotcher</span>
+      {% else %}
+         <div class="quote">{{ function('randomQuote') }}</div> <span>- 2016 Hopscotcher</span>
+      {% endif %}
+    </blockquote>
+    <p>Sept 7-8, 2017 <i class="icon line">|</i> Raleigh, NC</p>
+    <div class="button-container">
+      <a href="{{ function('etixLink') }}" target="_blank" class="button--white large">Buy Tickets</a>
+    </div>
+  </div>
+  {% if post.footer_image is not empty %}
+    <div class="promo__image" style="background-image: url('{{ TimberImage(post.footer_image) }}');"></div>
+  {% else %}
+    <div class="promo__image" style="background-image: url('{{ function('randomImage') }}');"></div>
+  {% endif %}
+</section>
+
+<footer id="site-footer">
+  <i class="icon h">Hopscotch</i>
+    <nav class="footer-nav">
+      <ul>
+          <li><a href="{{ path }}/experience">Experience</a></li>
+          <li><a href="{{ path }}/lineup">Lineup</a></li>
+          <li><a href="{{ path }}/news">News</a></li>
+          <li><a href="{{ path }}/contact">Contact</a></li>
+          <li><a href="{{ path }}/tickets">Buy Tickets</a></li>
+      </ul>
+    </nav>
+    <p>Produced by New Kind and Hopscotch Music Festival</p>
+    <img src="{{ theme.link }}/assets/icons/NewKind_footer_logo.svg" />
+    <span>+</span>
+    <img src="{{ theme.link }}/assets/icons/Hopscotch_footer_logo.svg" />
+    <ul class="social-links">
+        <li><a href="https://www.facebook.com/hopscotchdesignfestival/" target="_blank" class="facebook">Facebook</a></li>
+        <li><a href="https://twitter.com/hopdesignfest" target="_blank" class="twitter">Twitter</a></li>
+        <li><a href="https://www.instagram.com/hopdesignfest/" target="_blank" class="instagram">Instagram</a></li>
+    </ul>
+    <p class="copyright">&copy; 2017. Site design by <a href="http://newkind.com" target="_blank">New Kind</a>.</p>
+</footer>
+  <div class="alert-message">
+    <h2>We're pushing our own edges and using some new technologies to power this site. It may require you to update your browser.</h2>
+    <p>If you're using an outdated browser, or Microsoft Edge, you may have a lesser experience.</p>
+    <a href="#" class="button--white">Close</a>
+  </div>
+  <script src="{{ theme.link }}/js/dist/jquery.js"></script>
+  <script src="{{ theme.link }}/js/dist/scripts.js"></script>
+</body>
+</html>

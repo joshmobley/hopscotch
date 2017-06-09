@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <title>{% if post.title %} {{ post.title }} | {% endif %}{{ site.name }}</title>
+  <link rel="stylesheet" type="text/css" href="{{ theme.link }}/css/dist/global.css" />
+  <link rel="icon" type="image/x-icon" href="{{ theme.link }}/assets/icons/h-favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="http://hopdesign.wpengine.com/wp-content/uploads/2017/04/Footer_hero_image_3-1000x667.jpg" />
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76162661-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+		fbq('init', '1784137818466279');
+		fbq('init', '293782317664163');
+
+		fbq('track', "PageView");
+	</script>
+  <noscript><img height="1" width="1" style="display:none"
+  	src="https://www.facebook.com/tr?id=1784137818466279&ev=PageView&noscript=1"
+  /></noscript>
+  <noscript><img height="1" width="1" style="display:none"
+  	src="https://www.facebook.com/tr?id=293782317664163&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+<body>
+<header>
+    <a class="logo" href="{{ site.link }}"><i class="icon h">Hopscotch</i> <strong>Design</strong> Festival</a>
+    <nav class="site-nav">
+        <ul>
+            <li><a href="{{ site.link }}/experience">Experience</a></li>
+            <li><a href="{{ site.link }}/lineup">Lineup</a></li>
+            <li><a href="{{ site.link }}/news">News</a></li>
+            <li><a href="{{ site.link }}/contact">Contact</a></li>
+            <li><a href="https://www.etix.com/ticket/p/3263928/hopscotch-design-festival-2017--raleigh-hopscotch-design-festival" target="_blank"><span>Buy Tickets</span></a></li>
+        </ul>
+    </nav>
+    <span class="nav-toggle">
+      <a href="#site-footer">Menu</a>
+    </span>
+</header>

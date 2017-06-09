@@ -1,0 +1,12 @@
+
+{% for person in block.speakers %}
+
+<a href="{{ site.link }}/lineup/{{ person.speaker.post_name }}" class="grid__item">
+  <div class="grid__image-container">
+    <img class="grid__image" src="{{ function('get_field', 'image', person.speaker.ID).sizes.800 }}" />
+    <img class="grid__image--hover" src="{{ function('get_field', 'image_hover', person.speaker.ID).sizes.800 }}" />
+  </div>
+  <h5>{{ person.speaker.post_title }}</h5>
+  <p>{{ person.speaker.job_title }} + {{ person.speaker.organization }}</p>
+</a>
+{% endfor %}
