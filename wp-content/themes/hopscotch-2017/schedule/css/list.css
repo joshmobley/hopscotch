@@ -1,0 +1,27 @@
+.app-list {
+  margin: .5em;
+  position: relative;
+  z-index: 1;
+}
+
+.app-list ul {
+  display: flex;
+  flex-basis: 33%;
+  margin-bottom: 1vw;
+  width: 80%;
+}
+
+.app-list li {
+  background: rgba(0,0,0,.2);
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: 21.5%;
+  flex-direction: column;
+  margin-right: 1vw;
+  min-height: 150px;
+  padding: 1vw;
+}
+
+.app-list h5 {
+  font-size: .8em;
+}

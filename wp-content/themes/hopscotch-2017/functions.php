@@ -54,6 +54,19 @@ function create_post_types() {
     )
   );
 
+  register_post_type( 'venues',
+    array(
+      'labels' => array(
+        'name' => __( 'Venues' ),
+        'singular_name' => __( 'Venue' )
+      ),
+      'menu_icon' => 'dashicons-store',
+      'public' => true,
+      'has_archive' => true,
+      'show_in_rest' => true
+    )
+  );
+
 }
 
 

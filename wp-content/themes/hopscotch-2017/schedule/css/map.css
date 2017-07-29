@@ -1,0 +1,8 @@
+.app-map {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #ccc;
+  top: 0;
+  left: 0;
+}
