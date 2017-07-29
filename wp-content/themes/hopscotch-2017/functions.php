@@ -12,6 +12,10 @@ add_image_size( '1000', 1000, 1000, false );
 add_image_size( '1200', 1200, 1200, false );
 add_image_size( '1600', 1600, 1600, false );
 
+add_filter('acf/settings/google_api_key', function () {
+    return 'AIzaSyCIxSR0_9Ily3pTou6eajWGRdbXuH-v59s';
+});
+
 
 function create_post_types() {
 
