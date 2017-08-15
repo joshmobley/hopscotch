@@ -91,7 +91,7 @@
             <h2>Sponsors</h2>
             <div class="grid">
               {% for item in block.sponsors %}
-              <a href="{{ item.sponsor.link }}" target="_blank" class="grid__item"><img src="{{ TimberImage( item.sponsor.image ).src('400') }}" /></a>
+              <a href="{{ item.sponsor.link }}" target="_blank" class="grid__item--sponsor"><img src="{{ TimberImage( item.sponsor.image ).src('400') }}" /></a>
               {% endfor %}
             </div>
             <div class="button-container">

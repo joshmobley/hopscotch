@@ -42,6 +42,14 @@
     img {
       width: 100%;
     }
+
+    &--sponsor {
+      @extend .grid__item;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2%;
+      max-width: 300px;
+    }
   }
 
   &__image-container {
